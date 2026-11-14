@@ -1,0 +1,19 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no"><title>Pricoletta｜着せ替え操作試作</title><link rel="stylesheet" href="style.css"></head><body>
+<div id="app">
+<header class="top"><div class="logo">♡ Pricoletta <small>きせかえ試作</small></div><span class="proto">テストデータ専用</span></header>
+<main class="workspace">
+<section id="stage" class="stage"><div class="stage-bg"></div><div class="stage-title">DRESS UP <span id="sideLabel">LEFT</span></div><div id="scene" class="scene"><div class="body-zone left" data-side="0"><div class="doll-head"></div><div class="doll-body"></div><div class="doll-leg l"></div><div class="doll-leg r"></div><div class="wearables" data-side="0"></div><div class="side-tag">LEFT</div></div><div class="body-zone right" data-side="1"><div class="doll-head"></div><div class="doll-body"></div><div class="doll-leg l"></div><div class="doll-leg r"></div><div class="wearables" data-side="1"></div><div class="side-tag">RIGHT</div></div></div>
+<div class="stage-rail"><button id="btnMenu" aria-label="メニュー">☰</button><button id="btnDone" class="pink" aria-label="決定">✓</button><button id="btnUndo" class="thin" aria-label="戻る">↶</button><button id="btnRedo" class="thin" aria-label="進む">↷</button><button id="btnSearch" aria-label="検索">⌕</button></div>
+<div id="menu" class="menu hidden"><div class="menu-row"><button data-open="adjust">✥<span>アイテム調整</span></button><button data-open="background">▧<span>背景</span></button><button data-action="pair">♧<span>ペア</span></button></div><div class="menu-row bottom"><button data-open="qr">▦<span>QR</span></button><button data-open="settings">⚙<span>設定</span></button></div></div>
+<div id="searchBar" class="search-bar hidden"><button id="collectionBtn" class="collection-btn" title="マイコレクション">♡</button><input id="searchInput" placeholder="アイテム名・番号を検索" aria-label="アイテムを検索"><button id="filterBtn" title="条件で絞り込み">☷</button><button id="searchHide" title="検索を閉じる">⌄</button></div>
+<div id="sideSwitch" class="side-switch hidden"><button data-side="0">LEFT</button><button data-side="1">RIGHT</button></div>
+</section>
+<div class="category-line" id="categoryLine"><div class="cat-scroll" id="cats"></div></div>
+<div class="collection-line hidden" id="collectionLine"><button id="backCollections">‹</button><div id="collections" class="collections"></div></div>
+<div class="listing-head"><span id="count">アイテム</span><span id="activeNotice"></span></div><div id="cards" class="cards"></div>
+</main>
+<footer><span>※これは独立した操作確認用の試作です。保存はこの画面内のみ。</span></footer>
+</div>
+<div id="sheetBackdrop" class="sheet-backdrop hidden"></div><section id="sheet" class="sheet hidden"><div class="sheet-handle"></div><div class="sheet-head"><h2 id="sheetTitle"></h2><button id="closeSheet" aria-label="閉じる">×</button></div><div id="sheetBody" class="sheet-body"></div></section>
+<div id="toast" class="toast hidden"></div>
+<script src="app.js"></script></body></html>
